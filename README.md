@@ -21,6 +21,8 @@ def say_bye(data):
 li.run('job', dispatch)
 ```
 
+This code will listen for events originating from a `NOTIFY 'job', <DATA>` query.
+
 `pgnotifpy` allows you to use your own dispatcher, so you are not
 obliged to follow a specific convention for your messages.
 
