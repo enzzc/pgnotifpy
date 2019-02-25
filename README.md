@@ -39,7 +39,7 @@ For example, suppose you work with JSON-encoded messages that looks like this:
 All you have to do is to write a simple dispatcher function so `pgnotifpy` can
 do the correct routing for you.
 
-```pyhton
+```python
 def my_dispatch(payload):
     try:
         data = json.loads(payload)
