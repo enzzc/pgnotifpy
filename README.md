@@ -54,7 +54,7 @@ def my_dispatch(payload):
 Then, just pass it to the `run` method:
 
 ```python
-li.run('job', my_dispatcher
+li.run('job', my_dispatcher)
 ```
 
 
