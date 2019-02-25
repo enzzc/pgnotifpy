@@ -68,4 +68,25 @@ That is, if a dispatcher returns `('new_user', data)`, all
 functions listening to `'new_user'` will be triggered with
 `data` supplied as the only argument.
 
+## FAQ
+
+### Is it ready for production?
+Short answer: Not yet.
+
+Long &nswer: I use this wrapper in some real projects. However,
+this wrapper is used in specific environments
+that does not allow edge-cases such as an unexpectedly
+disconnected database.
+
+### Is it asynchronous?
+No.
+
+This library is a wrapper over `psycopg2` which works
+in a synchronous manner. Maybe someday I will make a version
+using the `asyncpg` library which supports `async`.
+
+### Use cases
+This library may not be suited for high-throughput processing such as
+data streaming. But, would you use PostgreSQL's `NOTIFY`/`LISTEN` for
+this kind of task anyway? :)
 
